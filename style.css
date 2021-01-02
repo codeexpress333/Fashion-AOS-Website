@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    background: url('./assets/img1.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+nav {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    margin: 0 30px;
+    text-decoration: none;
+    color: #eee;
+    padding: 8px 30px;
+    font-size: 1.5rem;
+    background: #000;
+}
+
+nav img {
+    margin: 0 30px;
+    max-width: 100px;
+    object-fit: cover;
+    cursor: pointer;
+    filter: invert(1);
+}
+
+.container {
+    height: auto;
+    width: 100%;
+    line-height: 1.5;
+    padding: 50px 0px;
+}
+
+.innerContainer {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: #eee;
+}
+
+.card {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card img {
+    max-width: 500px;
+    object-fit: cover;
+}
+
+.card .content {
+    padding: 50px;
+}
+
+.card .content h3 {
+    margin: 10px 0px;
+    font-size: 1.5rem;
+}
+
+.card .content p {
+    margin: 10px 0px;
+    font-size: 18px;
+    text-align: left;
+}
+
+.card .content button {
+    height: 40px;
+    width: 100px;
+    margin: 10px 0px;
+    border: 0;
+    outline: none;
+    background: #000;
+    color: #eee;
+    border-radius: 5px;
+}
+
+@media (max-width: 1100px) {
+    .innerContainer {
+        margin: 20px;
+        width: auto;
+        padding: 50px;
+        text-align: center;
+    }
+    .card {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .card .content p {
+        text-align: center;
+    }
+    .card:nth-child(2),
+    .card:nth-child(4),
+    .card:nth-child(6) {
+        flex-direction: column-reverse;
+    }
+}
+
+@media (max-width: 600px) {
+    .card img {
+        max-width: 350px;
+    }
+}
+
